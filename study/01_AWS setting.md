@@ -56,3 +56,24 @@ $> ssh -i study.pem ec2-user@{ip}
 - mysql -uroot -p  // 접속
 
 - http://kwonnam.pe.kr/wiki/database/mysql/basic
+
+# MongoDB
+- http://misoin.tistory.com/21
+- 1. 다운로드 wget https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-amazon-3.2.0.tgz
+- 2. vi mongodb.conf
+```
+dbpath=/app/mongodb-3.2.0/data   # mkdir -p /app/mongodb-3.2.0/data/
+logpath=/app/mongodb-3.2.0/mongodb.log
+logappend=true
+verbose=true
+#bind_ip=127.0.0.1
+port=27017
+fork=true
+# rest 옵션은 브라우저에서 접속할건지 여부, 브라우저포트는 port로 잡은 거에 +1000 한 값 (28017)
+rest=true
+#auth=true
+#noauth=true
+```
+- 3. MongoDB 서버 실행 : bin/mongod --config mongodb.conf  
+- 4. MongoDB client 실행 : bin/mongo localhost:27017
+- 5. MongoDB web 실행 : http://{ip}:28017/
