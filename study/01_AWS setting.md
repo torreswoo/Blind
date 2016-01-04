@@ -23,7 +23,7 @@
 - CLI접속
 ```
 $> chmod 700 study.pem
-$> ssh -i study.pem ec2-user@{ip}}
+$> ssh -i study.pem ec2-user@{ip}
 ```
 
 ## Linux (CentOS)
