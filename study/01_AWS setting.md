@@ -49,18 +49,18 @@ $> ssh -i study.pem ec2-user@{ip}
 ```
 
 # Mysql
-- rpm -qa | grep mysql-server // 설치확인
-- yum install mysql-server // 설치
-- service mysqld start // 서비스 시작
-- /usr/bin/mysqladmin -u root password '1111' // 패스워드변경
-- mysql -uroot -p  // 접속
+- 1.설치확인 : $ rpm -qa | grep mysql-server
+- 2. 설치 : $ yum install mysql-server
+- 3. 서비스 시작 : $ service mysqld start
+- 4. 패스워드변경 : $ /usr/bin/mysqladmin -u root password '1111'
+- 5. 접속 : $ mysql -uroot -p
 
 - http://kwonnam.pe.kr/wiki/database/mysql/basic
 
 # MongoDB
 - http://misoin.tistory.com/21
-- 1. 다운로드 wget https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-amazon-3.2.0.tgz
-- 2. vi mongodb.conf
+- 1. 다운로드 : wget https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-amazon-3.2.0.tgz
+- 2. DB서버설정 : $ vi mongodb.conf
 ```
 dbpath=/app/mongodb-3.2.0/data   # mkdir -p /app/mongodb-3.2.0/data/
 logpath=/app/mongodb-3.2.0/mongodb.log
@@ -74,6 +74,6 @@ rest=true
 #auth=true
 #noauth=true
 ```
-- 3. MongoDB 서버 실행 : bin/mongod --config mongodb.conf  
-- 4. MongoDB client 실행 : bin/mongo localhost:27017
-- 5. MongoDB web 실행 : http://{ip}:28017/
+- 3. MongoDB 서버 실행 : $ bin/mongod --config mongodb.conf  
+- 4. MongoDB client 실행 : $ bin/mongo localhost:27017
+- 5. MongoDB web 실행 : $ http://{ip}:28017/
